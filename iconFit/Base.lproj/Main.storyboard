@@ -665,12 +665,21 @@
                     <items>
                         <menuItem title="Item 1" id="Uwd-dC-4u1">
                             <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="statusMenuClickedWithSender:" target="Voe-Tx-rLC" id="cmA-sB-WVw"/>
+                            </connections>
                         </menuItem>
                         <menuItem title="Item 2" id="leM-oQ-5dW">
                             <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="statusMenuClickedWithSender:" target="Voe-Tx-rLC" id="ziw-tt-voZ"/>
+                            </connections>
                         </menuItem>
-                        <menuItem title="Item 3" id="a4h-Hl-PPe">
+                        <menuItem title="退出" tag="3" id="a4h-Hl-PPe" userLabel="退出">
                             <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="statusMenuClickedWithSender:" target="Voe-Tx-rLC" id="G8H-ER-jRQ"/>
+                            </connections>
                         </menuItem>
                     </items>
                     <connections>
