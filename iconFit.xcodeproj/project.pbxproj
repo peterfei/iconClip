@@ -12,6 +12,7 @@
 		88854FE91E00E34E0075108E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88854FE81E00E34E0075108E /* Assets.xcassets */; };
 		88854FEC1E00E34E0075108E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88854FEA1E00E34E0075108E /* Main.storyboard */; };
 		88854FF41E0118140075108E /* DragImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88854FF31E0118140075108E /* DragImageView.swift */; };
+		88C67F261E01366300A2FA9A /* imageSize.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88C67F251E01366300A2FA9A /* imageSize.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		88854FEB1E00E34E0075108E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88854FED1E00E34E0075108E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88854FF31E0118140075108E /* DragImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImageView.swift; sourceTree = "<group>"; };
+		88C67F251E01366300A2FA9A /* imageSize.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageSize.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				88854FE61E00E34E0075108E /* ViewController.swift */,
 				88854FE81E00E34E0075108E /* Assets.xcassets */,
 				88854FEA1E00E34E0075108E /* Main.storyboard */,
+				88C67F251E01366300A2FA9A /* imageSize.plist */,
 				88854FED1E00E34E0075108E /* Info.plist */,
 				88854FF31E0118140075108E /* DragImageView.swift */,
 			);
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88854FE91E00E34E0075108E /* Assets.xcassets in Resources */,
+				88C67F261E01366300A2FA9A /* imageSize.plist in Resources */,
 				88854FEC1E00E34E0075108E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,21 @@
 
 import Cocoa
 var statusItem: NSStatusItem!
+var appDelegate: NSObject?
+
+func startLocalNotification(message:String,info:String) {
+    let notification = NSUserNotification()
+    //消息标题
+    notification.title = message
+    //消息详细信息
+    notification.informativeText = info
+    
+    //设置代理
+    NSUserNotificationCenter.default.delegate = appDelegate as? NSUserNotificationCenterDelegate
+    
+    //注册本地推送
+    NSUserNotificationCenter.default.scheduleNotification(notification)
+}
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -18,6 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         self.createButtonStatusBar()
+        appDelegate = self
     }
     
     func createButtonStatusBar(){
@@ -55,7 +71,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
+    
+    
 
 }
 
+extension  AppDelegate: NSUserNotificationCenterDelegate{
+    // 强行通知
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
+}
