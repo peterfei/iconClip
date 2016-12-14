@@ -10,12 +10,16 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var imageView: DragImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setUpUIView()
         // Do any additional setup after loading the view.
     }
-
+    
+    func setUpUIView() {
+        self.imageView.delegate = self
+    }
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
@@ -25,3 +29,12 @@ class ViewController: NSViewController {
 
 }
 
+extension ViewController: DragImageZoneDelegate {
+    
+    func didFinishDragWithFile(_ filePath:String) {
+        NSLog("filePath \(filePath)")
+//        self.largeImagePath = filePath
+//        self.exportPath = self.usrDocPath()
+//        self.exportButton.isEnabled = true
+    }
+}
