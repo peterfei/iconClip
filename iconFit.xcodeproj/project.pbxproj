@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88275F181E077FB5007E0E12 /* NSImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88275F171E077FB5007E0E12 /* NSImage+Ext.swift */; };
+		88275F1A1E07803E007E0E12 /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88275F191E07803E007E0E12 /* FileManager+Ext.swift */; };
 		88854FE51E00E34E0075108E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88854FE41E00E34E0075108E /* AppDelegate.swift */; };
 		88854FE71E00E34E0075108E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88854FE61E00E34E0075108E /* ViewController.swift */; };
 		88854FE91E00E34E0075108E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88854FE81E00E34E0075108E /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88275F171E077FB5007E0E12 /* NSImage+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Ext.swift"; sourceTree = "<group>"; };
+		88275F191E07803E007E0E12 /* FileManager+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
 		88854FE11E00E34E0075108E /* iconFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iconFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88854FE41E00E34E0075108E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88854FE61E00E34E0075108E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				88C67F251E01366300A2FA9A /* imageSize.plist */,
 				88854FED1E00E34E0075108E /* Info.plist */,
 				88854FF31E0118140075108E /* DragImageView.swift */,
+				88275F171E077FB5007E0E12 /* NSImage+Ext.swift */,
+				88275F191E07803E007E0E12 /* FileManager+Ext.swift */,
 			);
 			path = iconFit;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88275F1A1E07803E007E0E12 /* FileManager+Ext.swift in Sources */,
+				88275F181E077FB5007E0E12 /* NSImage+Ext.swift in Sources */,
 				88854FE71E00E34E0075108E /* ViewController.swift in Sources */,
 				88854FF41E0118140075108E /* DragImageView.swift in Sources */,
 				88854FE51E00E34E0075108E /* AppDelegate.swift in Sources */,
