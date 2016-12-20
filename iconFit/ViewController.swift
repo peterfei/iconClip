@@ -41,6 +41,7 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func makeAppIconAction(_ sender: NSButton) {
+        
         self.makeAsserts()
     }
     
@@ -64,8 +65,9 @@ class ViewController: NSViewController {
 
     func makeAsserts() {
         
-        if (self.largeImagePath==nil) {
+        if (self.largeImagePath==nil || self.exportPath==nil) {
             startLocalNotification(message: "Oop...",info: "请将上传文件拖入")
+            return 
         }
 //        let selectedIndex = 3
         let appIconType = AppImageType.init(rawValue:  3)!
@@ -81,6 +83,7 @@ class ViewController: NSViewController {
     func makeAppIconWithType (_ type:AppImageType) {
         
         let imageFolerPath = (self.exportPath! as NSString).appendingPathComponent(kAppIconFolderName)
+        print("imageFolerPath is \(imageFolerPath)")
         let fm  = FileManager()
         let success = fm.createPathIfNeded(path: imageFolerPath)
         if !success {
@@ -124,8 +127,31 @@ class ViewController: NSViewController {
             }
         }
         
+        
     }
-    
+    func select_folder (){
+        let openPanel = NSOpenPanel()
+        openPanel.title = "Select a folder to watch for videos"
+        openPanel.message = "Videos you drop in the folder you select will be converted to animated gifs"
+        openPanel.showsResizeIndicator=true
+        openPanel.canChooseDirectories = true
+        openPanel.canChooseFiles = false
+        openPanel.allowsMultipleSelection = false
+        openPanel.canCreateDirectories = true
+//                    openPanel.delegate = appDelegate
+        
+        openPanel.begin { (result) -> Void in
+            if(result == NSFileHandlingPanelOKButton){
+                let path = openPanel.url!.path
+                
+                print("selected folder is \(path)")
+                self.exportPath = path
+                // self.watchFolderLabel.stringValue = path; //  no need when binding
+                //                    self.savePref("watchFolder", value: path);
+            }
+        }
+        
+    }
     //获取不同平台的图片配置
     func platAssetsConfig(_ type: AppImageType) ->[Dictionary<String,Any>] {
         var configs: [Dictionary<String,Any>]
@@ -179,7 +205,8 @@ extension ViewController: DragImageZoneDelegate {
     func didFinishDragWithFile(_ filePath:String) {
         NSLog("filePath \(filePath)")
         self.largeImagePath = filePath
-        self.exportPath = self.usrDocPath()
+        self.select_folder()
+//        self.exportPath = self.usrDocPath()
 //        self.exportButton.isEnabled = true
     }
 }
