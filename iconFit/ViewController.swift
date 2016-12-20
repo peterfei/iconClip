@@ -67,7 +67,7 @@ class ViewController: NSViewController {
         
         if (self.largeImagePath==nil || self.exportPath==nil) {
             startLocalNotification(message: "Oop...",info: "请将上传文件拖入")
-            return 
+            return
         }
 //        let selectedIndex = 3
         let appIconType = AppImageType.init(rawValue:  3)!
@@ -131,8 +131,8 @@ class ViewController: NSViewController {
     }
     func select_folder (){
         let openPanel = NSOpenPanel()
-        openPanel.title = "Select a folder to watch for videos"
-        openPanel.message = "Videos you drop in the folder you select will be converted to animated gifs"
+        openPanel.title = "请选择您的保存目录"
+        openPanel.message = "请选择您的保存目录"
         openPanel.showsResizeIndicator=true
         openPanel.canChooseDirectories = true
         openPanel.canChooseFiles = false
